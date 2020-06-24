@@ -1,0 +1,25 @@
+PImage Pixels, bomba; // Tipo de dados para armazenar imagens
+
+void setup()
+{
+  
+  // Criação da janela
+  frame.setTitle("Trabalhando com imagens"); // Define o título que irá aparecer na parte superior da janela
+  size(1366, 768);                   // Resolução da tela
+  background(53, 156, 196);          // Define a cor do fundo da janela em RGB
+  
+  // Carregando imagens
+  Pixels = loadImage("logo_pixels01.png"); // Carrega uma imagem em uma variável do tipo PImage
+  
+  // Criação da imagem
+  image(Pixels, 450,0);             // Desenha uma imagem na janela de exibição
+   
+  bomba = loadImage("bomba.png");   // Está sendo armazenado na varável bomba, a imagem de uma bomba
+  image(bomba, 450, 150);           // Desenha uma imagem na janela de exibição
+  
+}
+
+void draw()
+{
+  
+}
