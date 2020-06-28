@@ -10,8 +10,10 @@
    Data: Junho de 2020
 */
 
-const int pinTrigger = 3; //Pino 3 do Arduino será a saída de trigger
-const int pinEcho = 2;    //Pino 2 do Arduino será a entrada de echo
+//const int pinTrigger = 3; //Pino 3 do Arduino será a saída de trigger
+//const int pinEcho = 2;    //Pino 2 do Arduino será a entrada de echo
+const int pinTrigger = A4; //Pino 3 do Arduino será a saída de trigger
+const int pinEcho = A5;    //Pino 2 do Arduino será a entrada de echo
 
 long tempo;
 int distancia;
@@ -24,7 +26,8 @@ void setup()
   pinMode(pinEcho, INPUT);     //Pino de echo será entrada digital
 
   Serial.begin(9600);          //Inicia comunicação serial
-  servo.attach(12);            //Anexar o servo
+//  servo.attach(12);            //Anexar o servo
+  servo.attach(10);            //Anexar o servo
 }
 
 void loop()

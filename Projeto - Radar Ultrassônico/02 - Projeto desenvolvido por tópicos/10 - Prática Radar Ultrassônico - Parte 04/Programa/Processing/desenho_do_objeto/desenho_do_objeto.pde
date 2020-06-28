@@ -16,8 +16,6 @@ int index1=0;
 int index2=0;
 PFont orcFont;
 
-
-
 void setup() 
 {
 
