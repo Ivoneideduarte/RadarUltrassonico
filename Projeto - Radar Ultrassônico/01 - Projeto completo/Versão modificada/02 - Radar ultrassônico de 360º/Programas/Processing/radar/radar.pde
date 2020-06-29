@@ -24,8 +24,8 @@ void setup()
 {
   
  // Criação da janela
+ size (750, 750);  
  frame.setTitle("Radar Ultrassônico de 360º"); // Define o título que irá aparecer na parte superior da janela
- size (750, 750);                            
  smooth();
  myPort = new Serial(this, "COM5", 9600);     //Inicia a comunicação serial na COM4 com uma taxa de transmissão de 9600bps
  myPort.bufferUntil('.'); 
@@ -164,7 +164,7 @@ pushMatrix();
     text("Angle 1: " + iAngle +" °", width-width*0.23, int(60*width/1000));
   }
   
-  if(iDistance_2<40) 
+  if(iDistance_2 < 40) 
   {
     text("Distance 2: ", int(10*width/1000), height- height*0.03);
     text("    " + iDistance_2 +" cm", int(120*width/1000), height- height*0.03);
