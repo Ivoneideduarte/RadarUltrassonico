@@ -4,7 +4,6 @@
 //               Autora: Ivoneide Duarte
 //               Data: 28/06/2020         
 ///////////////////////////////////////////////////////////////////////////
-
 #include <Servo.h> //Biblioteca do Servo Motor
 
 //Conexões para o primeiro sensor de distância 
@@ -12,12 +11,12 @@ const int pinTrigger_1 = 6;
 const int pinEcho_1 = 5; 
 
 //Conexões para o segundo sensor de distância 
-const int pinTrigger_2 = 3;
-const int pinEcho_2 = 4;
+const int pinTrigger_2 = 4;
+const int pinEcho_2 = 3;
 
 #define pinServo 2
 
-long tempo;
+long tempo_1, tempo_2;
 int dist_1, dist_2; //Distâncias
 
 Servo servo;
@@ -72,8 +71,8 @@ int calculoDistancia_1()
   digitalWrite(pinTrigger_1, HIGH); //Pulso de trigger em nível alto
   delayMicroseconds(10);  //Pulso ativo  //duração de 10 microsegundos
   digitalWrite(pinTrigger_1, LOW);  //Pulso de trigge em nível baixo
-  tempo = pulseIn(pinEcho_1, HIGH); //Escuta a porta 10(Echo), tempo de echo: 10 microssegundos e 3min
-  dist_1 = tempo * 0.034 / 2; // Por fim, esta é a fórmula que utilizamos para converter o tempo na distancia do objeto até o sensor
+  tempo_1 = pulseIn(pinEcho_1, HIGH); //Escuta a porta 10(Echo), tempo de echo: 10 microssegundos e 3min
+  dist_1 = tempo_1 * 0.034 / 2; // Por fim, esta é a fórmula que utilizamos para converter o tempo na distancia do objeto até o sensor
 
   return dist_1;
 }
@@ -86,8 +85,8 @@ int calculoDistancia_2()
   digitalWrite(pinTrigger_2, HIGH); //Pulso de trigger em nível alto
   delayMicroseconds(10);  //Pulso ativo  //duração de 10 microsegundos
   digitalWrite(pinTrigger_2, LOW);  //Pulso de trigge em nível baixo
-  tempo = pulseIn(pinEcho_2, HIGH); //Escuta a porta 10(Echo), tempo de echo: 10 microssegundos e 3min
-  dist_2 = tempo * 0.034 / 2; // Por fim, esta é a fórmula que utilizamos para converter o tempo na distancia do objeto até o sensor
+  tempo_2 = pulseIn(pinEcho_2, HIGH); //Escuta a porta 10(Echo), tempo de echo: 10 microssegundos e 3min
+  dist_2 = tempo_2 * 0.034 / 2; // Por fim, esta é a fórmula que utilizamos para converter o tempo na distancia do objeto até o sensor
 
   return dist_2;
 }
