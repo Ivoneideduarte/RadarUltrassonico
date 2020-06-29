@@ -1,3 +1,10 @@
+////////////////////////////////////////////////////////////////////////////
+//            ------ Radar Ultrassônico de 360º -------
+//               Projeto: Radar com HC-SR04
+//               Autora: Ivoneide Duarte
+//               Data: 28/06/2020         
+///////////////////////////////////////////////////////////////////////////
+
 #include <Servo.h> //Biblioteca do Servo Motor
 
 //Conexões para o primeiro sensor de distância 
