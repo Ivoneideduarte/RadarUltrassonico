@@ -1,3 +1,10 @@
+////////////////////////////////////////////////////////////////////////////
+//            ------ Radar Ultrassônico de 360º -------
+//               Projeto: Radar com HC-SR04
+//               Autora: Ivoneide Duarte
+//               Data: 28/06/2020         
+///////////////////////////////////////////////////////////////////////////
+
 import processing.serial.*;      // Biblioteca responsável por gerenciar a comunicação serial entre a IDE Arduino e a IDE Processing        
 import java.awt.event.KeyEvent;  // É uma classe JAVA de um evento que é gerado por um campo de texto quando ele é digitado     
 import java.io.IOException;      // É uma classe JAVA que sinaliza quando houver alguma exceção de entrada/saída
